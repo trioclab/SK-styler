@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+  </head>
+  <body>
+    <form>
+      <input type="number" placeholder="enter a number" required id="number1" />
+      <input type="number" placeholder="enter a number" required id="number2"/>
+      <button onclick="
+             no1 = parseFloat(document.getElementById('number1').value);
+             no2 = parseFloat(document.getElementById('number2').value);
+            console.log(no1)
+            console.log(no2)
+      " type="button">save</button>
+      <button onclick="
+        add()
+      " type="button">Add</button>
+      <button type="button">Substract</button>
+      <button type="button">Multiply</button>
+      <button type="button">Division</button>
+      <p id="answer">answer</p>
+    </form>
+    <script>
+      let no1, no2;
+      function add(){
+    let sum = no1 + no2
+    document.getElementById('answer').innerText = sum
+}
+    </script>
+  </body>
+</html>
